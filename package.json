@@ -11,6 +11,22 @@
         "resources": {
             "media": [
                 {
+                    "file": "images/Torn 08C.png",
+                    "name": "TORN_COLOUR",
+                    "targetPlatforms": [
+                        "basalt"
+                    ],
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/Torn Icon C.png",
+                    "name": "TORN_ICON",
+                    "targetPlatforms": [
+                        "basalt"
+                    ],
+                    "type": "bitmap"
+                },
+                {
                     "file": "images/Torn QVC.png",
                     "name": "TORN_QV_C",
                     "targetPlatforms": [
@@ -33,7 +49,6 @@
                     "name": "TORN_ICON",
                     "targetPlatforms": [
                         "aplite",
-                        "basalt",
                         "diorite"
                     ],
                     "type": "bitmap"
@@ -71,5 +86,5 @@
             "watchface": true
         }
     },
-    "version": "1.2.0"
+    "version": "1.4.0"
 }
