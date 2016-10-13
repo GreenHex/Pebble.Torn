@@ -8,6 +8,7 @@ Version 1.0
 * It's sluggish.
 * It sucks-up battery.
 * Time display should still be readable.
+- Suports Timeline Quick View.
 
 Version 1.1
 
