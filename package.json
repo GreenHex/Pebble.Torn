@@ -11,17 +11,29 @@
         "resources": {
             "media": [
                 {
+                    "file": "images/Torn QVC.png",
+                    "name": "TORN_QV_C",
+                    "targetPlatforms": [
+                        "basalt"
+                    ],
+                    "type": "bitmap"
+                },
+                {
                     "file": "images/Torn QV.png",
                     "name": "TORN_QV",
                     "targetPlatforms": [
+                        "basalt",
                         "diorite"
                     ],
                     "type": "bitmap"
                 },
                 {
                     "file": "images/Torn Icon.png",
+                    "menuIcon": true,
                     "name": "TORN_ICON",
                     "targetPlatforms": [
+                        "aplite",
+                        "basalt",
                         "diorite"
                     ],
                     "type": "bitmap"
@@ -30,6 +42,8 @@
                     "file": "images/Torn 03.png",
                     "name": "TORN_IMAGE_03",
                     "targetPlatforms": [
+                        "aplite",
+                        "basalt",
                         "diorite"
                     ],
                     "type": "bitmap"
@@ -38,6 +52,8 @@
                     "file": "images/Torn 01.png",
                     "name": "TORN_IMAGE_01",
                     "targetPlatforms": [
+                        "aplite",
+                        "basalt",
                         "diorite"
                     ],
                     "type": "bitmap"
@@ -46,6 +62,8 @@
         },
         "sdkVersion": "3",
         "targetPlatforms": [
+            "aplite",
+            "basalt",
             "diorite"
         ],
         "uuid": "4ea6c784-f50b-420c-b82b-12293c870fd5",
@@ -53,5 +71,5 @@
             "watchface": true
         }
     },
-    "version": "1.1.0"
+    "version": "1.2.0"
 }
