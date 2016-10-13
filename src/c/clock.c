@@ -25,7 +25,7 @@ static tm tm_time;
 
 static void handle_clock_tick( struct tm *tick_time, TimeUnits units_changed ) {
   tm_time = *tick_time; // copy to global
-  layer_mark_dirty( text_layer_get_layer( digital_clock_text_layer ) );
+  layer_mark_dirty( bitmap_layer_get_layer( digital_clock_bitmap_layer ) );
 }
 
 static void digital_clock_bitmap_layer_update_proc( Layer *layer, GContext *ctx ) {
@@ -37,6 +37,7 @@ static void digital_clock_bitmap_layer_update_proc( Layer *layer, GContext *ctx 
   srand( tm_time.tm_sec + tm_time.tm_min );
   
   // random stuff
+  // need to make this a uniform distribution
   for( int y = 0; y < layer_bounds.size.h; y++ ) {
     y += rand() % ( layer_bounds.size.h - y );
     for( int x = 0; x < layer_bounds.size.w; x++ ) {
@@ -71,7 +72,7 @@ static void digital_clock_text_layer_update_proc( Layer *layer, GContext *ctx ) 
 static void prv_unobstructed_change( AnimationProgress progress, void *window_root_layer ) {
   GRect unobstructed_bounds = layer_get_unobstructed_bounds( window_root_layer );
   layer_set_frame( bitmap_layer_get_layer( digital_clock_bitmap_layer ), unobstructed_bounds );
-  layer_set_frame( text_layer_get_layer( digital_clock_text_layer ), unobstructed_bounds );
+  // layer_set_frame( text_layer_get_layer( digital_clock_text_layer ), unobstructed_bounds );
 }
 
 static void prv_unobstructed_did_change( void *context ) {
