@@ -13,8 +13,6 @@
         },
         "sdkVersion": "3",
         "targetPlatforms": [
-            "aplite",
-            "basalt",
             "diorite"
         ],
         "uuid": "4ea6c784-f50b-420c-b82b-12293c870fd5",
