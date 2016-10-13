@@ -1,3 +1,5 @@
+#pragma once
 #include <pebble.h>
 
-#define DEBUG 1
+#define DEBUG 0
+

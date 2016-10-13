@@ -2,6 +2,19 @@
 #include "global.h"
 #include "clock.h"
 
+#define NUM_PBL_64_COLOURS 64
+
+const uint32_t PBL_64_COLOURS[ NUM_PBL_64_COLOURS ] = {
+	0x000000, 0xFFFFFF, 0xAAAAAA, 0x555555, 0xFFFFAA, 0xFFFF55, 0xFFAA55, 0xFF5500,
+	0xFF0000, 0xFF0055, 0xFF5555, 0xFFAAAA, 0xFFFF00, 0xFFAA00, 0xAA5500, 0xAA5555,
+	0xAA0000, 0xFF00AA, 0xFF55AA, 0xFFAAFF, 0x550000, 0xAA0055, 0xFF00FF, 0xFF55FF,
+	0x550055, 0xAA00AA, 0xAA55AA, 0x000055, 0x5500AA, 0xAA00FF, 0xAA55FF, 0x0000AA,
+	0x5500FF, 0x5555AA, 0x0055AA, 0x55AAAA, 0x55AA55, 0x00AA00, 0x00FF00, 0x55FF00,
+	0xAAFF55, 0xAAFF00, 0x55AA00, 0x005500, 0x005555, 0xAAAA55, 0x555500, 0xAAAA00,
+	0xAAFFAA, 0x55FF55, 0x00FF55, 0x00AA55, 0x00AAAA, 0x00AAFF, 0x0000FF, 0x5555FF,
+	0xAAAAFF, 0x55FFAA, 0x00FFAA, 0x00FFFF, 0x55AAFF, 0x0055FF, 0x55FFFF, 0xAAFFFF
+};
+
 #define FONT_HEIGHT 58 /* somehow getting the text to center on screen */ 
 
 static Layer *window_layer = 0;
@@ -30,7 +43,11 @@ static void digital_clock_bitmap_layer_update_proc( Layer *layer, GContext *ctx 
       // x += rand() % ( layer_bounds.size.w - x );
       GPoint a = GPoint( rand() % layer_bounds.size.w, y );
       GPoint b = GPoint( rand() % layer_bounds.size.w, y );
-      GColor colour = ( rand() % 2 ) ? GColorWhite : GColorBlack;
+      #if defined( PBL_COLOR )
+        GColor colour = ( rand() % 2 ) ? GColorBlack : GColorFromHEX( PBL_64_COLOURS[ ( rand() % NUM_PBL_64_COLOURS ) ] );
+      #else
+        GColor colour = ( rand() % 2 ) ? GColorWhite : GColorBlack;
+      #endif
       graphics_context_set_stroke_color( ctx, colour );
       graphics_draw_line( ctx, a, b );
     }
@@ -76,13 +93,13 @@ void clock_init( Window *window ) {
   layer_set_update_proc( text_layer_get_layer( digital_clock_text_layer ), digital_clock_text_layer_update_proc );
   large_digital_font = fonts_get_system_font( FONT_KEY_BITHAM_42_LIGHT );
   
+  // subscriptions
   UnobstructedAreaHandlers handler = {
     .change = prv_unobstructed_change,
     .did_change = prv_unobstructed_did_change
   };
   unobstructed_area_service_subscribe( handler, window_layer );
   
-  // subscriptions
   tick_timer_service_subscribe( SECOND_UNIT, handle_clock_tick );
   
   time_t timeInSecs = time( NULL );
