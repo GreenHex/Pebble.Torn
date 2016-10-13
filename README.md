@@ -11,6 +11,6 @@ Version 1.0
 
 Version 1.1
 
-* It's sluggish.
-* It sucks-up battery.
-* Time display should still be readable.
+* More realistic screen tearing.
+* Tearing refresh represents seconds.
+* Better battery life.
