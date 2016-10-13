@@ -11,8 +11,8 @@
         "resources": {
             "media": [
                 {
-                    "file": "images/Torn 03.png",
-                    "name": "TORN_IMAGE_03",
+                    "file": "images/Torn QV.png",
+                    "name": "TORN_QV",
                     "targetPlatforms": [
                         "diorite"
                     ],
@@ -21,6 +21,14 @@
                 {
                     "file": "images/Torn Icon.png",
                     "name": "TORN_ICON",
+                    "targetPlatforms": [
+                        "diorite"
+                    ],
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/Torn 03.png",
+                    "name": "TORN_IMAGE_03",
                     "targetPlatforms": [
                         "diorite"
                     ],
