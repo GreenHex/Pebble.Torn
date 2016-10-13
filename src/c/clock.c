@@ -2,7 +2,7 @@
 #include "global.h"
 #include "clock.h"
 
-#define FONT_HEIGHT 58
+#define FONT_HEIGHT 58 /* somehow getting the text to center on screen */ 
 
 static Layer *window_layer = 0;
 static BitmapLayer *digital_clock_bitmap_layer = 0;
