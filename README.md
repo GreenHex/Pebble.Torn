@@ -9,6 +9,7 @@ Version 1.0
 * It sucks-up battery.
 * Time display should still be readable.
 - Suports Timeline Quick View.
+- Supports 12 and 24 hour time display.
 
 Version 1.1
 
