@@ -9,7 +9,24 @@
         "messageKeys": [],
         "projectType": "native",
         "resources": {
-            "media": []
+            "media": [
+                {
+                    "file": "images/Torn Icon.png",
+                    "name": "TORN_ICON",
+                    "targetPlatforms": [
+                        "diorite"
+                    ],
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/Torn 01.png",
+                    "name": "TORN_IMAGE",
+                    "targetPlatforms": [
+                        "diorite"
+                    ],
+                    "type": "bitmap"
+                }
+            ]
         },
         "sdkVersion": "3",
         "targetPlatforms": [
