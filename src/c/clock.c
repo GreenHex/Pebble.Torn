@@ -21,10 +21,13 @@ static void digital_clock_bitmap_layer_update_proc( Layer *layer, GContext *ctx 
   GRect layer_bounds = layer_get_bounds( layer );
   graphics_context_set_fill_color( ctx, GColorBlack );
   graphics_fill_rect( ctx, layer_bounds, 0, GCornersAll );
+  srand( tm_time.tm_sec + tm_time.tm_min );
   
   // random stuff
   for( int y = 0; y < layer_bounds.size.h; y++ ) {
+    y += rand() % ( layer_bounds.size.h - y );
     for( int x = 0; x < layer_bounds.size.w; x++ ) {
+      // x += rand() % ( layer_bounds.size.w - x );
       GPoint a = GPoint( rand() % layer_bounds.size.w, y );
       GPoint b = GPoint( rand() % layer_bounds.size.w, y );
       GColor colour = ( rand() % 2 ) ? GColorWhite : GColorBlack;
