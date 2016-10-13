@@ -1,0 +1,26 @@
+{
+    "author": "The Resetter",
+    "dependencies": {},
+    "keywords": [],
+    "name": "torn",
+    "pebble": {
+        "displayName": "Torn",
+        "enableMultiJS": true,
+        "messageKeys": [],
+        "projectType": "native",
+        "resources": {
+            "media": []
+        },
+        "sdkVersion": "3",
+        "targetPlatforms": [
+            "aplite",
+            "basalt",
+            "diorite"
+        ],
+        "uuid": "4ea6c784-f50b-420c-b82b-12293c870fd5",
+        "watchapp": {
+            "watchface": true
+        }
+    },
+    "version": "1.0.0"
+}
