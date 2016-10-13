@@ -72,7 +72,7 @@ static void digital_clock_text_layer_update_proc( Layer *layer, GContext *ctx ) 
 static void prv_unobstructed_change( AnimationProgress progress, void *window_root_layer ) {
   GRect unobstructed_bounds = layer_get_unobstructed_bounds( window_root_layer );
   layer_set_frame( bitmap_layer_get_layer( digital_clock_bitmap_layer ), unobstructed_bounds );
-  // layer_set_frame( text_layer_get_layer( digital_clock_text_layer ), unobstructed_bounds );
+  layer_set_frame( text_layer_get_layer( digital_clock_text_layer ), unobstructed_bounds );
 }
 
 static void prv_unobstructed_did_change( void *context ) {
