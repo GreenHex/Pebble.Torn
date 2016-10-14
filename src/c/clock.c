@@ -34,7 +34,7 @@ static void digital_clock_bitmap_layer_update_proc( Layer *layer, GContext *ctx 
   GRect layer_bounds = layer_get_bounds( layer );
   graphics_context_set_fill_color( ctx, GColorBlack );
   graphics_fill_rect( ctx, layer_bounds, 0, GCornersAll );
-  srand( tm_time.tm_sec + tm_time.tm_min );
+  srand( tm_time.tm_sec + tm_time.tm_min + rand() );
   
   // random stuff
   // need to make this a uniform distribution
