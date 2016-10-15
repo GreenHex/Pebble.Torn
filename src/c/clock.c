@@ -29,7 +29,6 @@ static void handle_clock_tick( struct tm *tick_time, TimeUnits units_changed ) {
 }
 
 static void digital_clock_bitmap_layer_update_proc( Layer *layer, GContext *ctx ) {
-
   // background
   GRect layer_bounds = layer_get_bounds( layer );
   graphics_context_set_fill_color( ctx, GColorBlack );
@@ -104,7 +103,7 @@ void clock_init( Window *window ) {
   tick_timer_service_subscribe( SECOND_UNIT, handle_clock_tick );
   
   time_t timeInSecs = time( NULL );
-  tm_time = *localtime( &timeInSecs );
+  tm_time = *localtime( &timeInSecs ); // copy to global
 }
 
 void clock_deinit( void ) {
