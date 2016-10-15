@@ -19,4 +19,4 @@ Version 1.1
 
 Version 1.2
 
-* Support for Aplite and Basalt.
+* Support for Aplite (what's the point?) and Basalt.
