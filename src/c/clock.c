@@ -79,7 +79,6 @@ static void prv_unobstructed_did_change( void *context ) {
 }
 
 void clock_init( Window *window ) {
-  
   window_layer = window_get_root_layer( window );
   GRect window_bounds = layer_get_bounds( window_layer );
   GRect clock_layer_bounds = window_bounds; 
