@@ -11,22 +11,6 @@
         "resources": {
             "media": [
                 {
-                    "file": "images/Torn 08C.png",
-                    "name": "TORN_COLOUR",
-                    "targetPlatforms": [
-                        "basalt"
-                    ],
-                    "type": "bitmap"
-                },
-                {
-                    "file": "images/Torn Icon C.png",
-                    "name": "TORN_ICON",
-                    "targetPlatforms": [
-                        "basalt"
-                    ],
-                    "type": "bitmap"
-                },
-                {
                     "file": "images/Torn QVC.png",
                     "name": "TORN_QV_C",
                     "targetPlatforms": [
@@ -50,6 +34,22 @@
                     "targetPlatforms": [
                         "aplite",
                         "diorite"
+                    ],
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/Torn Icon C.png",
+                    "name": "TORN_ICON",
+                    "targetPlatforms": [
+                        "basalt"
+                    ],
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/Torn 08C.png",
+                    "name": "TORN_COLOUR",
+                    "targetPlatforms": [
+                        "basalt"
                     ],
                     "type": "bitmap"
                 },
