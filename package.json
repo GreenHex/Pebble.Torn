@@ -41,7 +41,8 @@
                     "file": "images/Torn Icon C.png",
                     "name": "TORN_ICON",
                     "targetPlatforms": [
-                        "basalt"
+                        "basalt",
+                        "emery"
                     ],
                     "type": "bitmap"
                 },
@@ -79,12 +80,13 @@
         "targetPlatforms": [
             "aplite",
             "basalt",
-            "diorite"
+            "diorite",
+            "emery"
         ],
         "uuid": "4ea6c784-f50b-420c-b82b-12293c870fd5",
         "watchapp": {
             "watchface": true
         }
     },
-    "version": "1.4.0"
+    "version": "1.5.0"
 }
