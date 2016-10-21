@@ -1,5 +1,5 @@
 # Pebble.Torn
-Missing screen tearing of the OG Pebble?
+Missing screen tearing on your Pebble 2?
 
 ![Torn](/resources/images/Torn 03.png) ![Torn](/resources/images/Torn 01.png) ![Torn](/resources/images/Torn QV.png) ![Torn](/resources/images/Torn QVC.png) ![Torn C](resources/images/Torn 08C.png)
 
